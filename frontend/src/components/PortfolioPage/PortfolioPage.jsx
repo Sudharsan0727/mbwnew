@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Filter,
-  ArrowRight,
   ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Users
+  ArrowRight,
+  Sparkles
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
@@ -24,83 +20,55 @@ const PortfolioPage = () => {
     : portfolioProjects.filter(project => project.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f9fafb]">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
-        
-        {/* Animated Decorative Elements */}
-        <motion.div 
-          className="absolute top-20 right-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-30"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-20 left-10 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-40"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.4, 0.6, 0.4]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Hero Section - Clean & Minimal */}
+      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-br from-white via-blue-50/30 to-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-16 text-center">
           <motion.div 
             className="flex items-center justify-center gap-2 mb-6"
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
-            <Sparkles className="w-6 h-6 text-blue-600" />
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">Portfolio</span>
+            <Sparkles className="w-5 h-5 text-[#0d214f]" />
+            <span className="text-[#0d214f] font-medium text-sm tracking-wider uppercase">Our Work</span>
           </motion.div>
           
           <motion.h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Our Creative Portfolio
+            Our Portfolio
           </motion.h1>
           
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
+            className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Explore our latest web development, branding, and digital success stories.
+            Showcasing some of our finest digital creations.
+            <span className="block mt-2 text-[#0d214f] font-medium">Every project tells a story of innovation.</span>
           </motion.p>
         </div>
       </section>
 
-      {/* Filter Tabs Section */}
-      <section className="py-12 bg-white sticky top-20 z-40 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-2 flex-wrap">
+      {/* Filter Tabs - Clean Pills */}
+      <section className="py-8 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 md:px-16">
+          <div className="flex items-center justify-center gap-3 flex-wrap">
             {portfolioCategories.map((category) => (
               <motion.button
                 key={category.id}
                 onClick={() => setActiveFilter(category.value)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
                   activeFilter === category.value
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-[#0d214f] text-white shadow-lg shadow-blue-900/20'
+                    : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -112,68 +80,66 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* Portfolio Grid Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Portfolio Grid - Clean & Spacious */}
+      <section className="py-20 bg-[#f9fafb]">
+        <div className="max-w-7xl mx-auto px-6 md:px-16">
           <AnimatePresence mode="wait">
             <motion.div 
               key={activeFilter}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
             >
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  whileHover={{ y: -4 }}
                 >
                   {/* Project Image */}
-                  <div className="relative overflow-hidden aspect-video">
-                    <motion.img
+                  <div className="relative overflow-hidden aspect-[4/3]">
+                    <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.4 }}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     
-                    {/* Hover Overlay */}
-                    <motion.div 
-                      className="absolute inset-0 bg-blue-600/95 flex items-center justify-center p-6"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="text-center text-white">
-                        <p className="text-lg font-semibold mb-4">{project.description}</p>
-                        <div className="flex items-center justify-center gap-2 font-medium">
+                    {/* Hover Overlay - Subtle */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d214f]/95 via-[#0d214f]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                      <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <p className="text-sm mb-3 leading-relaxed">{project.description}</p>
+                        <div className="flex items-center gap-2 text-sm font-medium">
                           <span>View Project</span>
-                          <ExternalLink className="w-5 h-5" />
+                          <ExternalLink className="w-4 h-4" />
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
                   
                   {/* Project Info */}
                   <div className="p-6">
-                    <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 text-sm font-medium rounded-full mb-3">
+                    <div className="inline-block px-3 py-1 bg-blue-50 text-[#0d214f] text-xs font-semibold rounded-full mb-3">
                       {project.category}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                       {project.title}
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.slice(0, 3).map((tech, idx) => (
-                        <span key={idx} className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">
+                        <span key={idx} className="text-xs px-2.5 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-100">
                           {tech}
                         </span>
                       ))}
+                      {project.technologies.length > 3 && (
+                        <span className="text-xs px-2.5 py-1 text-gray-400">
+                          +{project.technologies.length - 3}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -183,77 +149,89 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* Featured Case Studies Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+      {/* Featured Case Studies - Premium Layout */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-16">
+          <div className="text-center mb-16">
+            <motion.h2 
+              className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               Featured Case Studies
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Deep dive into our most successful projects and see how we delivered exceptional results
-            </p>
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              Deep dive into our most successful projects
+            </motion.p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="space-y-24">
             {featuredCaseStudies.map((project, index) => (
               <motion.div
                 key={project.id}
-                className="group bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${
+                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
               >
-                {/* Image */}
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full shadow-lg">
-                    <span className="text-blue-600 font-semibold text-sm">{project.category}</span>
+                {/* Image Section */}
+                <div className={`relative group ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute top-6 right-6 bg-white px-4 py-2 rounded-full shadow-lg">
+                      <span className="text-[#0d214f] font-semibold text-sm">{project.category}</span>
+                    </div>
                   </div>
                 </div>
                 
-                {/* Content */}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                {/* Content Section */}
+                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                  <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                     {project.description}
                   </p>
                   
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-8">
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-white text-gray-700 text-sm rounded-full shadow-sm">
+                      <span key={idx} className="px-4 py-2 bg-gray-50 text-gray-700 text-sm rounded-lg border border-gray-100 font-medium">
                         {tech}
                       </span>
                     ))}
                   </div>
                   
-                  {/* Results */}
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <span className="text-gray-700">Successfully delivered on time and budget</span>
+                  {/* Results Grid */}
+                  {project.results && (
+                    <div className="grid grid-cols-3 gap-6 mb-8">
+                      {project.results.map((result, idx) => (
+                        <div key={idx} className="text-center">
+                          <div className="text-3xl font-bold text-[#0d214f] mb-1">{result.metric}</div>
+                          <div className="text-sm text-gray-600">{result.description}</div>
+                        </div>
+                      ))}
                     </div>
-                    <div className="flex items-center gap-3">
-                      <TrendingUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <span className="text-gray-700">Exceeded client expectations and KPIs</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <span className="text-gray-700">Enhanced user experience and engagement</span>
-                    </div>
-                  </div>
+                  )}
                   
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 rounded-lg font-medium transition-all group-hover:shadow-lg">
-                    Read Case Study
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                  <Button className="bg-[#0d214f] hover:bg-[#1e40af] text-white px-8 py-6 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl group">
+                    View Case Study
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
               </motion.div>
@@ -262,25 +240,32 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Call to Action - Premium Gradient */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0d214f] via-[#1e40af] to-[#0d214f]"></div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        
+        <div className="relative max-w-4xl mx-auto px-6 md:px-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Let's Build Something Amazing Together
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Let's Build Something
+              <span className="block">Extraordinary Together</span>
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Ready to transform your digital presence? Let's discuss your project and create something extraordinary.
+            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Ready to transform your digital presence? Let's discuss your project and create something remarkable.
             </p>
             <Link to="/contact">
-              <Button className="bg-white text-blue-600 hover:bg-blue-50 px-10 py-6 text-lg font-semibold rounded-lg transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+              <Button className="bg-white text-[#0d214f] hover:bg-blue-50 px-10 py-7 text-lg font-bold rounded-xl transition-all shadow-2xl hover:shadow-white/20 hover:scale-105 group">
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </motion.div>
