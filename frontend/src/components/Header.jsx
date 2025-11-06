@@ -120,12 +120,12 @@ const Header = () => {
               )}
             </div>
 
-            <button
-              onClick={() => scrollToSection('portfolio')}
+            <Link
+              to="/portfolio"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Portfolio
-            </button>
+            </Link>
 
             <Link
               to="/blog"
@@ -186,12 +186,13 @@ const Header = () => {
               >
                 Our Services
               </button>
-              <button
-                onClick={() => scrollToSection('portfolio')}
+              <Link
+                to="/portfolio"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-gray-700 hover:text-blue-600 font-medium text-left px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Portfolio
-              </button>
+              </Link>
               <Link
                 to="/blog"
                 onClick={() => setIsMobileMenuOpen(false)}
