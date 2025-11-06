@@ -13,6 +13,8 @@ import FAQ from "./components/FAQ";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Aboutuspage from "./components/Aboutuspage/Aboutuspage";
+import Blogpage from "./components/Blogpage/Blogpage";
 import { Toaster } from "./components/ui/sonner";
 
 const Home = () => {
@@ -43,6 +45,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<Aboutuspage />} />
+          <Route path="/blog" element={<Blogpage />} />
         </Routes>
       </BrowserRouter>
     </div>

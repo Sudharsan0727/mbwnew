@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { services } from '../mockData';
 import * as Icons from 'lucide-react';
@@ -8,6 +9,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,28 +37,28 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
+          <Link to="/" className="flex items-center cursor-pointer">
             <img
               src="https://customer-assets.emergentagent.com/job_fad851ea-a437-4828-91f9-49571711ae7a/artifacts/s6injtxh_mbw.png"
               alt="MBW Techimpex"
               className="h-10 w-auto"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('hero')}
+            <Link
+              to="/"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
+            </Link>
+            <Link
+              to="/about"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
-              About MBW
-            </button>
+              About Us
+            </Link>
             
             {/* Services Mega Menu */}
             <div
@@ -109,12 +111,12 @@ const Header = () => {
             >
               Portfolio
             </button>
-            <button
-              onClick={() => scrollToSection('blog')}
+            <Link
+              to="/blog"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Blog
-            </button>
+            </Link>
             <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -146,18 +148,20 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-3">
-              <button
-                onClick={() => scrollToSection('hero')}
+              <Link
+                to="/"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-gray-700 hover:text-blue-600 font-medium text-left px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-gray-700 hover:text-blue-600 font-medium text-left px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors"
               >
-                About MBW
-              </button>
+                About Us
+              </Link>
               <button
                 onClick={() => scrollToSection('services')}
                 className="text-gray-700 hover:text-blue-600 font-medium text-left px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors"
@@ -170,12 +174,13 @@ const Header = () => {
               >
                 Portfolio
               </button>
-              <button
-                onClick={() => scrollToSection('blog')}
+              <Link
+                to="/blog"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-gray-700 hover:text-blue-600 font-medium text-left px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Blog
-              </button>
+              </Link>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="text-gray-700 hover:text-blue-600 font-medium text-left px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors"
