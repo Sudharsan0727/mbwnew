@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { services } from '../mockData';
 import * as Icons from 'lucide-react';
@@ -10,6 +10,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +27,16 @@ const Header = () => {
       setIsMobileMenuOpen(false);
       setIsServicesOpen(false);
     }
+  };
+
+  // ✅ Smart behavior for Contact buttons
+  const handleContactClick = () => {
+    if (location.pathname === '/') {
+      scrollToSection('contact');
+    } else {
+      navigate('/contact');
+    }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -59,7 +70,7 @@ const Header = () => {
             >
               About Us
             </Link>
-            
+
             {/* Services Mega Menu */}
             <div
               className="relative"
@@ -70,7 +81,7 @@ const Header = () => {
                 Our Services
                 <ChevronDown className="w-4 h-4" />
               </button>
-              
+
               {isServicesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-white rounded-lg shadow-xl border border-gray-100 p-6">
                   <div className="grid grid-cols-2 gap-4">
@@ -88,8 +99,12 @@ const Header = () => {
                             </div>
                           )}
                           <div>
-                            <h3 className="font-medium text-gray-900 text-sm mb-1">{service.title}</h3>
-                            <p className="text-xs text-gray-600 line-clamp-2">{service.description}</p>
+                            <h3 className="font-medium text-gray-900 text-sm mb-1">
+                              {service.title}
+                            </h3>
+                            <p className="text-xs text-gray-600 line-clamp-2">
+                              {service.description}
+                            </p>
                           </div>
                         </button>
                       );
@@ -111,14 +126,17 @@ const Header = () => {
             >
               Portfolio
             </button>
+
             <Link
               to="/blog"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Blog
             </Link>
+
+            {/* Contact button (smart behavior) */}
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={handleContactClick}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Contact
@@ -128,7 +146,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={handleContactClick}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all"
             >
               Get Quote
@@ -182,13 +200,13 @@ const Header = () => {
                 Blog
               </Link>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={handleContactClick}
                 className="text-gray-700 hover:text-blue-600 font-medium text-left px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Contact
               </button>
               <Button
-                onClick={() => scrollToSection('contact')}
+                onClick={handleContactClick}
                 className="bg-blue-600 hover:bg-blue-700 text-white w-full py-2 rounded-lg font-medium transition-all"
               >
                 Get Quote

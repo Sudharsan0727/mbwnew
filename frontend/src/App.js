@@ -15,6 +15,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Aboutuspage from "./components/Aboutuspage/Aboutuspage";
 import Blogpage from "./components/Blogpage/Blogpage";
+import Contactpage from "./components/Contactpage/Contactpage";
 import { Toaster } from "./components/ui/sonner";
 
 const Home = () => {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Aboutuspage />} />
           <Route path="/blog" element={<Blogpage />} />
+          <Route path="/contact" element={<Contactpage />} />
         </Routes>
       </BrowserRouter>
     </div>
