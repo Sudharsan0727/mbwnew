@@ -18,6 +18,7 @@ import Blogpage from "./components/Blogpage/Blogpage";
 import Contactpage from "./components/Contactpage/Contactpage";
 import PortfolioPage from "./components/PortfolioPage/PortfolioPage";
 import { Toaster } from "./components/ui/sonner";
+import FloatingBar from "./components/FloatingBar/FloatingBar";
 
 const Home = () => {
   return (
@@ -45,6 +46,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        {/* ✅ Floating Bar visible on every page */}
+        <FloatingBar />  
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Aboutuspage />} />

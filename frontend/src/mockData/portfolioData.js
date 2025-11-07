@@ -12,73 +12,121 @@ export const portfolioCategories = [
 export const portfolioProjects = [
   {
     id: 1,
-    title: "E-commerce Platform for Retail Brand",
-    category: "Web Development",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    title: "Consolidated Construction Consortium Limited",
+    category: "Construction",
+    image: "/img/Portfolio Page/CCCL_Portfolio.png",
     description: "Complete e-commerce solution with payment gateway integration and inventory management",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"]
   },
   {
     id: 2,
-    title: "Corporate Website Redesign",
-    category: "Web Design",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
+    title: "The Ce-Mentor",
+    category: "Construction",
+    image: "/img/Portfolio Page/CE-Mentor_Portfolio.png",
     description: "Modern, responsive corporate website with CMS integration and SEO optimization",
     technologies: ["WordPress", "PHP", "MySQL", "CSS3"]
   },
   {
     id: 3,
-    title: "Healthcare Mobile App",
-    category: "Mobile Development",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    title: "Rank Projects",
+    category: "Construction",
+    image: "/img/Portfolio Page/RankProject_Portfolio.png",
+    description: "Modern, responsive corporate website with CMS integration and SEO optimization",
+    technologies: ["WordPress", "PHP", "MySQL", "CSS3"]
+  },
+  {
+    id: 3,
+    title: "Dugar Finance",
+    category: "Finance",
+    image: "/img/Portfolio Page/Durgar_Portfolio.png",
+    description: "Patient management app for healthcare providers with appointment scheduling",
+    technologies: ["Flutter", "Firebase", "REST API"]
+  },
+  {
+    id: 3,
+    title: "Rank Law",
+    category: "Lawyer",
+    image: "/img/Portfolio Page/Ranklaw_Portfolio.png",
+    description: "Patient management app for healthcare providers with appointment scheduling",
+    technologies: ["Flutter", "Firebase", "REST API"]
+  },
+  {
+    id: 3,
+    title: "Saivam",
+    category: "Spiritual",
+    image: "/img/Portfolio Page/Saivam_Portfolio.png",
+    description: "Patient management app for healthcare providers with appointment scheduling",
+    technologies: ["Flutter", "Firebase", "REST API"]
+  },
+  {
+    id: 3,
+    title: "Sidharism",
+    category: "Spiritual",
+    image: "/img/Portfolio Page/Sidharism_Portfolio.png",
+    description: "Patient management app for healthcare providers with appointment scheduling",
+    technologies: ["Flutter", "Firebase", "REST API"]
+  },
+  {
+    id: 3,
+    title: "Sottathatti sivaraman",
+    category: "Spiritual",
+    image: "/img/Portfolio Page/Sottathattisivaraman_Portfolio.png",
     description: "Patient management app for healthcare providers with appointment scheduling",
     technologies: ["Flutter", "Firebase", "REST API"]
   },
   {
     id: 4,
-    title: "SEO Campaign for Tech Startup",
-    category: "Digital Marketing",
-    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&q=80",
+    title: "Inexus Biotech Pvt Ltd",
+    category: "Biotechnology",
+    image: "/img/Portfolio Page/Inexus_Portfolio.png",
+    description: "Achieved 300% organic traffic growth in 6 months through strategic SEO",
+    technologies: ["Google Analytics", "SEMrush", "Content Marketing"]
+  },
+  {
+    id: 4,
+    title: "BioSystems Diagnostics",
+    category: "Biotechnology",
+    image: "/img/Portfolio Page/Biosystem_Portfolio.png",
     description: "Achieved 300% organic traffic growth in 6 months through strategic SEO",
     technologies: ["Google Analytics", "SEMrush", "Content Marketing"]
   },
   {
     id: 5,
-    title: "Restaurant Booking Platform",
-    category: "Web Development",
-    image: "https://images.unsplash.com/photo-1571677246347-5040036b95cc?w=800&q=80",
+    title: "Jay Dheep Techno Enterprisess",
+    category: "Industrial Engineering",
+    image: "/img/Portfolio Page/Jay_Portfolio.png",
     description: "Online reservation system with real-time table management and notifications",
     technologies: ["React", "Express", "PostgreSQL", "Socket.io"]
   },
   {
     id: 6,
-    title: "Manufacturing Company Portal",
-    category: "Enterprise Solutions",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80",
+    title: "ksr India",
+    category: "Industrial Engineering",
+    image: "/img/Portfolio Page/Ksr_Portfolio.png",
     description: "B2B portal with inventory and order management for manufacturing operations",
     technologies: ["Angular", "Java Spring", "Oracle", "Docker"]
   },
   {
     id: 7,
-    title: "Fitness App UI/UX Design",
-    category: "Web Design",
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80",
+    title: "PMI Group",
+    category: "manufacturing",
+    image: "/img/Portfolio Page/PMI_Portfolio.png",
     description: "Complete UI/UX design for a fitness tracking mobile application",
     technologies: ["Figma", "Sketch", "Adobe XD"]
   },
   {
     id: 8,
-    title: "Social Media Marketing Campaign",
-    category: "Digital Marketing",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    title: "Raksha Green",
+    category: "Environmental Services",
+    image: "/img/Portfolio Page/Rasksha_Portfolio.png",
     description: "Multi-platform social media campaign with 500% increase in engagement",
     technologies: ["Meta Ads", "Instagram", "Analytics"]
   },
   {
     id: 9,
-    title: "Financial Dashboard Application",
-    category: "Web Development",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    title: "Sreevari Enterprises",
+    category: "Sheet Metal Manufacturing",
+    image: "/img/Portfolio Page/Sreevari_Portfolio.png",
     description: "Real-time financial analytics dashboard with data visualization",
     technologies: ["Vue.js", "D3.js", "Python", "FastAPI"]
   }
@@ -90,7 +138,7 @@ export const featuredCaseStudies = [
     id: 1,
     title: "TechVision E-commerce Transformation",
     category: "Web Development",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&q=80",
+    image: "/img/Portfolio Page/TechVision_Protfilio.png",
     description: "Complete digital transformation for a leading retail brand, including custom e-commerce platform development, payment gateway integration, and inventory management system. The project resulted in 250% increase in online sales and 40% reduction in operational costs.",
     technologies: ["React", "Node.js", "MongoDB", "AWS", "Stripe"],
     results: [
@@ -105,7 +153,7 @@ export const featuredCaseStudies = [
     id: 2,
     title: "HealthCare Pro Mobile Solution",
     category: "Mobile Development",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80",
+    image: "/img/Portfolio Page/HealthCar_Protfilio.png",
     description: "Revolutionary healthcare mobile application that connects patients with healthcare providers seamlessly. Features include appointment scheduling, telemedicine integration, prescription management, and real-time health monitoring. Deployed across 50+ clinics serving 10,000+ patients.",
     technologies: ["Flutter", "Firebase", "WebRTC", "Node.js", "PostgreSQL"],
     results: [

@@ -28,7 +28,7 @@ const Blogpage = () => {
       author: "MBW Insights Team",
       date: "Jan 15, 2025",
       category: "Technology",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Exploring how AI, automation, and cloud technologies are reshaping the business landscape and driving innovation across industries.",
       readTime: "5 min read"
     },
@@ -38,7 +38,7 @@ const Blogpage = () => {
       author: "Priya Sharma",
       date: "Jan 12, 2025",
       category: "Business",
-      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Proven SEO tactics to boost your website's visibility and drive organic traffic in an increasingly competitive digital marketplace.",
       readTime: "7 min read"
     },
@@ -48,7 +48,7 @@ const Blogpage = () => {
       author: "Rajesh Kumar",
       date: "Jan 10, 2025",
       category: "Design",
-      image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "The critical importance of mobile-first design in today's world where over 60% of web traffic comes from mobile devices.",
       readTime: "6 min read"
     },
@@ -58,7 +58,7 @@ const Blogpage = () => {
       author: "David Chen",
       date: "Jan 8, 2025",
       category: "Technology",
-      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "How machine learning is being integrated into web applications to create smarter, more personalized user experiences.",
       readTime: "8 min read"
     },
@@ -68,7 +68,7 @@ const Blogpage = () => {
       author: "Sarah Johnson",
       date: "Jan 5, 2025",
       category: "Business",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Essential strategies for creating a cohesive and memorable brand presence across all digital touchpoints and platforms.",
       readTime: "5 min read"
     },
@@ -78,7 +78,7 @@ const Blogpage = () => {
       author: "MBW Development Team",
       date: "Jan 3, 2025",
       category: "Innovation",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Why PWAs are becoming the preferred choice for businesses looking to deliver app-like experiences on the web.",
       readTime: "6 min read"
     },
@@ -88,7 +88,7 @@ const Blogpage = () => {
       author: "Amit Patel",
       date: "Dec 30, 2024",
       category: "Design",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "From micro-interactions to immersive 3D elements, discover the design trends that will dominate the digital landscape this year.",
       readTime: "7 min read"
     },
@@ -98,7 +98,7 @@ const Blogpage = () => {
       author: "Marketing Team",
       date: "Dec 28, 2024",
       category: "Business",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Advanced strategies and best practices for maximizing your return on investment with targeted Google Ads campaigns.",
       readTime: "6 min read"
     },
@@ -108,7 +108,7 @@ const Blogpage = () => {
       author: "Tech Insights",
       date: "Dec 25, 2024",
       category: "Technology",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "A comprehensive comparison of the three major cloud platforms to help you choose the right infrastructure for your business.",
       readTime: "9 min read"
     },
@@ -118,7 +118,7 @@ const Blogpage = () => {
       author: "Security Team",
       date: "Dec 22, 2024",
       category: "Technology",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Essential security measures every website owner should implement to protect against threats and vulnerabilities.",
       readTime: "8 min read"
     },
@@ -128,7 +128,7 @@ const Blogpage = () => {
       author: "Sneha Reddy",
       date: "Dec 20, 2024",
       category: "Business",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Leveraging social media platforms to build engaged communities, drive traffic, and boost conversions for your business.",
       readTime: "5 min read"
     },
@@ -138,7 +138,7 @@ const Blogpage = () => {
       author: "Innovation Lab",
       date: "Dec 18, 2024",
       category: "Innovation",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
+      image: "/img/Blog/Digital_blog.png",
       excerpt: "Exploring real-world applications of blockchain in supply chain, healthcare, finance, and other industries.",
       readTime: "7 min read"
     }

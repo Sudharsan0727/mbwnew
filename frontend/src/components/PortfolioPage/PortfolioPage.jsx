@@ -1,29 +1,18 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ExternalLink,
-  ArrowRight,
-  Sparkles
-} from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ExternalLink, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
-import { portfolioCategories, portfolioProjects, featuredCaseStudies } from '../../mockData/portfolioData';
+import { portfolioProjects, featuredCaseStudies } from '../../mockData/portfolioData';
 
 const PortfolioPage = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
-  
-  // Filter projects based on selected category
-  const filteredProjects = activeFilter === 'all'
-    ? portfolioProjects
-    : portfolioProjects.filter(project => project.category === activeFilter);
-
   return (
     <div className="min-h-screen bg-[#f9fafb]">
       <Header />
       
-      {/* Hero Section - Clean & Minimal */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-br from-white via-blue-50/30 to-white">
         <div className="max-w-7xl mx-auto px-6 md:px-16 text-center">
           <motion.div 
@@ -33,7 +22,9 @@ const PortfolioPage = () => {
             transition={{ duration: 0.6 }}
           >
             <Sparkles className="w-5 h-5 text-[#0d214f]" />
-            <span className="text-[#0d214f] font-medium text-sm tracking-wider uppercase">Our Work</span>
+            <span className="text-[#0d214f] font-medium text-sm tracking-wider uppercase">
+              Our Work
+            </span>
           </motion.div>
           
           <motion.h1 
@@ -52,100 +43,61 @@ const PortfolioPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             Showcasing some of our finest digital creations.
-            <span className="block mt-2 text-[#0d214f] font-medium">Every project tells a story of innovation.</span>
+            <span className="block mt-2 text-[#0d214f] font-medium">
+              Every project tells a story of innovation.
+            </span>
           </motion.p>
         </div>
       </section>
 
-      {/* Filter Tabs - Clean Pills */}
-      <section className="py-8 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-16">
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            {portfolioCategories.map((category) => (
-              <motion.button
-                key={category.id}
-                onClick={() => setActiveFilter(category.value)}
-                className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
-                  activeFilter === category.value
-                    ? 'bg-[#0d214f] text-white shadow-lg shadow-blue-900/20'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {category.label}
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Grid - Clean & Spacious */}
+      {/* Portfolio Grid */}
       <section className="py-20 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-6 md:px-16">
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={activeFilter}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {filteredProjects.map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  whileHover={{ y: -4 }}
-                >
-                  {/* Project Image */}
-                  <div className="relative overflow-hidden aspect-[4/3]">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    
-                    {/* Hover Overlay - Subtle */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d214f]/95 via-[#0d214f]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                      <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <p className="text-sm mb-3 leading-relaxed">{project.description}</p>
-                        <div className="flex items-center gap-2 text-sm font-medium">
-                          <span>View Project</span>
-                          <ExternalLink className="w-4 h-4" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            {portfolioProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                whileHover={{ y: -4 }}
+              >
+                {/* Project Image */}
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                   
-                  {/* Project Info */}
-                  <div className="p-6">
-                    <div className="inline-block px-3 py-1 bg-blue-50 text-[#0d214f] text-xs font-semibold rounded-full mb-3">
-                      {project.category}
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                      {project.title}
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.slice(0, 3).map((tech, idx) => (
-                        <span key={idx} className="text-xs px-2.5 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-100">
-                          {tech}
-                        </span>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <span className="text-xs px-2.5 py-1 text-gray-400">
-                          +{project.technologies.length - 3}
-                        </span>
-                      )}
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d214f]/95 via-[#0d214f]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                    <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <p className="text-sm mb-3 leading-relaxed">{project.description}</p>
+                      {/* <div className="flex items-center gap-2 text-sm font-medium">
+                        <span>View Project</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </div> */}
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+                </div>
+                
+                {/* Project Info */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{project.category}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

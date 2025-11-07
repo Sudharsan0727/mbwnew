@@ -49,25 +49,25 @@ const Contactpage = () => {
     {
       icon: MapPin,
       title: 'Our Office',
-      details: ['MBW Techimpex Pvt Ltd', 'Chennai, Tamil Nadu', 'India - 600001'],
+      details: ['15 F, Valmiki Street', 'T.Nagar, Chennai', 'Tamil Nadu, India - 600017'],
       color: 'blue'
     },
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['+91 44 1234 5678', '+91 98765 43210', 'Mon - Sat, 9 AM - 6 PM'],
+      details: ['+91 44 4260 5227', '+91 98408 86487', 'Mon - Fri, 9 AM - 6 PM'],
       color: 'green'
     },
     {
       icon: Mail,
       title: 'Email Address',
-      details: ['info@mbwtechimpex.com', 'support@mbwtechimpex.com', 'sales@mbwtechimpex.com'],
+      details: ['contact@mbwit.net', 'sales@mbwtechimpex.com'],
       color: 'purple'
     },
     {
       icon: Clock,
       title: 'Working Hours',
-      details: ['Monday - Friday: 9 AM - 6 PM', 'Saturday: 9 AM - 1 PM', 'Sunday: Closed'],
+      details: ['Monday - Friday: 9.30 AM - 6.30 PM', 'Saturday: 9.30 AM - 1.00 PM', 'Sunday: See you on Monday'],
       color: 'orange'
     }
   ];

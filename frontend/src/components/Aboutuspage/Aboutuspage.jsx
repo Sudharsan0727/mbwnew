@@ -23,7 +23,7 @@ const Aboutuspage = () => {
     { label: "Clients", value: "4800+", icon: Users },
     { label: "Projects", value: "4500+", icon: Briefcase },
     { label: "Countries", value: "18", icon: Globe },
-    { label: "Years Experience", value: "19+", icon: Award }
+    { label: "Years Experience", value: "20+", icon: Award }
   ];
 
   // Timeline milestones
@@ -89,13 +89,13 @@ const Aboutuspage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <Link to="/#portfolio">
+            <Link to="/portfolio">
               <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg rounded-lg font-medium transition-all">
                 View Our Work
               </Button>
@@ -108,16 +108,17 @@ const Aboutuspage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            
             {/* Image */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-blue-400/10 rounded-2xl transform rotate-3"></div>
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+                src="/img/About us/Aboutus.png"
                 alt="MBW Team Collaboration"
                 className="relative rounded-2xl shadow-2xl w-full h-[400px] object-cover"
               />
               <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-xl shadow-xl">
-                <div className="text-4xl font-bold">19+</div>
+                <div className="text-4xl font-bold">20+</div>
                 <div className="text-sm font-medium">Years of Excellence</div>
               </div>
             </div>
@@ -130,40 +131,70 @@ const Aboutuspage = () => {
               </div>
               
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Your Trusted Digital Partner in Chennai
+                Your Trusted Digital Partner
               </h2>
               
               <p className="text-lg text-gray-600 mb-6">
                 MBW Techimpex Private Limited is a leading web development and digital marketing company based in Chennai, India. Since 2004, we've been helping businesses transform their digital presence and achieve remarkable growth.
               </p>
               
-              <p className="text-lg text-gray-600 mb-6">
-                With over 19 years of industry experience, we've successfully delivered 4500+ projects for 4800+ clients across 18 countries. Our expertise spans web development, digital marketing, SEO, mobile app development, and comprehensive digital solutions.
+              <p className="text-lg text-gray-600 mb-10">
+                With over 20 years of industry experience, we've successfully delivered 4500+ projects for 4800+ clients across 18 countries. Our expertise spans web development, digital marketing, SEO, mobile app development, and comprehensive digital solutions.
               </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Industry Expertise</h3>
-                    <p className="text-gray-600">Deep understanding of diverse industries and business needs</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Innovation-Driven</h3>
-                    <p className="text-gray-600">Leveraging cutting-edge technology for competitive advantage</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Client-Centric Approach</h3>
-                    <p className="text-gray-600">Dedicated support and long-term partnerships</p>
-                  </div>
-                </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Core Values Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              What Drives Our Success
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our core principles define how we deliver excellence and innovation to every client.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                <CheckCircle className="w-7 h-7" />
               </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Industry Expertise</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Deep understanding of diverse industries and business needs to deliver 
+                customized digital solutions that make real impact.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-5">
+                <Sparkles className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation-Driven</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Leveraging cutting-edge technologies and creative thinking to keep our clients 
+                ahead of the digital curve.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-5">
+                <Users className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Client-Centric Approach</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Dedicated support, long-term partnerships, and tailored solutions 
+                built around your business goals.
+              </p>
             </div>
           </div>
         </div>
@@ -190,7 +221,7 @@ const Aboutuspage = () => {
               
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed text-justify">
                 To empower businesses of all sizes with innovative digital solutions that drive measurable growth and sustainable success. We are committed to delivering excellence through cutting-edge technology, strategic thinking, and unwavering dedication to our clients' goals.
               </p>
               
@@ -218,7 +249,7 @@ const Aboutuspage = () => {
               
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed text-justify">
                 To be the most trusted global partner for digital transformation, recognized for innovation, reliability, and exceptional service. We envision a future where every business, regardless of size, has access to world-class digital solutions that unlock their full potential.
               </p>
               
@@ -348,13 +379,13 @@ const Aboutuspage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <Link to="/#services">
+            <Link to="/services">
               <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-lg font-medium transition-all">
                 Explore Services
               </Button>
@@ -363,7 +394,7 @@ const Aboutuspage = () => {
 
           <div className="mt-12 pt-8 border-t border-blue-500">
             <p className="text-blue-100 text-sm">
-              💼 Trusted by businesses in 18 countries | 🏆 19+ years of excellence | ⭐ 4800+ happy clients
+              💼 Trusted by businesses in 18 countries | 🏆 20+ years of excellence | ⭐ 4800+ happy clients
             </p>
           </div>
         </div>

@@ -209,8 +209,8 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Call Us</h3>
                   <p className="text-gray-600">
-                    +91 (044) 1234 5678<br />
-                    +91 98765 43210
+                    +91 44 4260 5227 <br />
+                    +91 98408 86487
                   </p>
                 </div>
               </div>
@@ -224,8 +224,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Email Us</h3>
-                  <p className="text-gray-600">
-                    info@mbwtechimpex.com<br />
+                  <p className="text-gray-600">                    
+                    contact@mbwit.net<br />
                     sales@mbwtechimpex.com
                   </p>
                 </div>
@@ -238,15 +238,15 @@ const Contact = () => {
               <div className="space-y-2 text-blue-50">
                 <p className="flex justify-between">
                   <span>Monday - Friday:</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
+                  <span className="font-medium">9:30 AM - 6:30 PM</span>
                 </p>
                 <p className="flex justify-between">
                   <span>Saturday:</span>
-                  <span className="font-medium">9:00 AM - 2:00 PM</span>
+                  <span className="font-medium">9:30 AM - 1:00 PM</span>
                 </p>
                 <p className="flex justify-between">
                   <span>Sunday:</span>
-                  <span className="font-medium">Closed</span>
+                  <span className="font-medium">See you on Monday</span>
                 </p>
               </div>
             </div>
